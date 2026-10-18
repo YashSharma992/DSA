@@ -1,9 +1,27 @@
 class Solution {
 public:
     bool isPowerOfTwo(int n) {
+        return (n!=INT_MIN)&&(__builtin_popcount(n)==1);
+
+
+
+        // while(!(n&1)){
+        //     n>>=1;
+        // }
+        // return n==1;
+
+
+        // while(n>1){
+        //     if(n&1)
+        //     return 0;
+        //     n>>=1;
+        // }
+        // return n==1;
+
+
         //return (n>0)&&((n&(n-1))==0);
 
-        return (n>0)&&(__builtin_popcount(n)==1);
+        // return (n>0)&&(__builtin_popcount(n)==1);
 
         //return (n>0)&&((__builtin_clz(n)+__builtin_ctz(n))==31);
 
