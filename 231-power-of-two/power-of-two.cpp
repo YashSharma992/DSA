@@ -1,8 +1,9 @@
 class Solution {
 public:
     bool isPowerOfTwo(int n) {
-        return (n!=INT_MIN)&&(__builtin_popcount(n)==1);
+        return (n>0)&&(!(n&n-1));
 
+        // return (n!=INT_MIN)&&(__builtin_popcount(n)==1);
 
 
         // while(!(n&1)){
