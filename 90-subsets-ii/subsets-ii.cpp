@@ -8,6 +8,7 @@ public:
         fun(ans,nums,v,i+1,n);
         v.push_back(nums[i]);
         fun(ans,nums,v,i+1,n);
+        v.pop_back();
     }
     vector<vector<int>> subsetsWithDup(vector<int>& nums) {
         sort(nums.begin(), nums.end());
